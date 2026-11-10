@@ -1,0 +1,95 @@
+{
+  "packages": [
+    {
+      "id": "home-lite",
+      "name": "HOME LITE",
+      "speed": "15 Mbps",
+      "price": "110.000",
+      "tagline": "Pas untuk keluarga kecil",
+      "taglineEn": "Great for small families",
+      "popular": false,
+      "features": [
+        "Kuota unlimited tanpa FUP",
+        "5 devices",
+        "Gratis biaya instalasi (promo)",
+        "Support 24/7"
+        
+      ],
+      "featuresEn": [
+        "Unlimited data without FUP",
+        "Symmetric fiber optic",
+        "Free installation (promo)",
+        "24/7 support"
+      ]
+    },
+    {
+      "id": "home-plus",
+      "name": "HOME PLUS",
+      "speed": "25 mbps",
+      "price": "150.000",
+      "tagline": "Lancar untuk streaming & WFH",
+      "taglineEn": "Smooth for streaming & WFH",
+      "popular": true,
+      "features": [
+        "Kuota unlimited tanpa FUP",
+        "5 devices",
+        "Fiber optic premium",
+        "Prioritas support",
+        "Support 24/7"
+      ],
+      "featuresEn": [
+        "Unlimited data without FUP",
+        "Symmetric fiber optic",
+        "Free dual-band router",
+        "Priority support",
+        "Support 24/7"
+      ]
+    },
+    {
+      "id": "home-pro",
+      "name": "HOME PRO",
+      "speed": "30 Mbps",
+      "price": "175.000",
+      "tagline": "Internet + TV ",
+      "taglineEn": "Ideal for gaming & 4K",
+      "popular": false,
+      "features": [
+        "Kuota unlimited tanpa FUP",
+        "6 Devices",
+        "TV dengan beragam pilihan channel",
+        "Fiber optic premium",
+        "Support 24/7"
+      ],
+      "featuresEn": [
+        "Unlimited data without FUP",
+        "Symmetric fiber optic",
+        "Free WiFi 6 router",
+        "Low-latency gaming",
+        "Support 24/7"
+      ]
+    },
+    {
+      "id": "business",
+      "name": "BUSINESS",
+      "speed": "50 Mbps",
+      "price": "200.000",
+      "tagline": "Untuk kantor & bisnis kecil",
+      "taglineEn": "Internet Only",
+      "popular": false,
+      "features": [
+        "Kuota unlimited tanpa FUP",
+        "Fiber optic premium",
+        "Router WiFi 6 gratis",
+        "SLA support prioritas",
+        "Opsi IP publik statis"
+      ],
+      "featuresEn": [
+        "Unlimited data without FUP",
+        "Symmetric fiber optic",
+        "Free WiFi 6 router",
+        "Priority SLA support",
+        "Static public IP option"
+      ]
+    }
+  ]
+}
