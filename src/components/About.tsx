@@ -22,7 +22,7 @@ export default function About() {
         <div className="about-wrap">
           <div className="neon-card about-card" data-reveal>
             <p className="about-lead">
-              <span className="hl">FISSA.NET</span> {t.about.lead}
+              <span className="hl">FISSAN.NET</span> {t.about.lead}
             </p>
             <div className="about-points">
               {t.about.points.map((point) => (

@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "FISSA.NET",
+  name: "FISSAN.NET",
   tagline: "Fiber Optic Internet",
   phoneDisplay: "0851 7222 2264",
   phoneRaw: "085172222264",
@@ -31,7 +31,7 @@ export const waLink = (adminNumber: string | null, message?: string) => {
 };
 
 export const WA_DEFAULT_MESSAGE =
-  "Halo FISSA.NET! Saya tertarik dengan layanan internet FISSA.NET dan ingin bertanya.";
+  "Halo FISSAN.NET! Saya tertarik dengan layanan internet FISSAN.NET dan ingin bertanya.";
 
 export const WA_DEFAULT_MESSAGE_EN =
-  "Hello FISSA.NET! I'm interested in FISSA.NET internet service and would like to ask a few questions.";
+  "Hello FISSAN.NET! I'm interested in FISSAN.NET internet service and would like to ask a few questions.";

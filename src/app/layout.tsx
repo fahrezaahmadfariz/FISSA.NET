@@ -11,18 +11,18 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "FISSA.NET — Internet Fiber Optic Cepat, Unlimited, Harga Mulai 110rb",
+  title: "FISSAN.NET — Internet Fiber Optic Cepat, Unlimited, Harga Mulai 110rb",
   description:
-    "FISSA.NET menyediakan internet fiber optic untuk rumah dan usaha kecil. Kuota unlimited tanpa FUP, gratis instalasi, support 24/7, harga mulai Rp110.000 per bulan.",
+    "FISSAN.NET menyediakan internet fiber optic untuk rumah dan usaha kecil. Kuota unlimited tanpa FUP, gratis instalasi, support 24/7, harga mulai Rp110.000 per bulan.",
   keywords: [
-    "FISSA.NET",
+    "FISSAN.NET",
     "wifi fiber optic",
     "internet rumah",
     "internet unlimited",
     "pasang wifi",
   ],
   openGraph: {
-    title: "FISSA.NET — Internet Fiber Optic Cepat & Unlimited",
+    title: "FISSAN.NET — Internet Fiber Optic Cepat & Unlimited",
     description:
       "Internet fiber optic untuk rumah dan usaha kecil. Unlimited tanpa FUP, support 24/7, mulai Rp110.000 per bulan.",
     type: "website",

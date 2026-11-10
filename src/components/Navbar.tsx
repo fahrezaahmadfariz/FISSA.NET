@@ -54,7 +54,7 @@ export default function Navbar() {
           <span className="brand-mark">
             <WifiIcon width={18} height={18} />
           </span>
-          FISSA.NET
+          FISSAN.NET
         </a>
 
         <div className="nav-links">

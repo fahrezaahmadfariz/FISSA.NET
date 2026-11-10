@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="brand-mark">
                 <WifiIcon width={18} height={18} />
               </span>
-              FISSA.NET
+              FISSAN.NET
             </div>
             <p className="footer-copy">{t.footer.copy}</p>
             <div className="footer-admins" style={{ marginTop: "1.2rem" }}>
