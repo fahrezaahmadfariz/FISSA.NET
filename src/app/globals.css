@@ -1498,7 +1498,7 @@ svg {
 
 .faq-item {
   border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 16px;
+  border-radius: 0;
   background: rgba(13, 31, 54, 0.72);
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 8, 24, 0.2);
@@ -1530,7 +1530,7 @@ svg {
   width: 30px;
   height: 30px;
   flex: none;
-  border-radius: 50%;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.16);
   display: grid;
   place-items: center;
