@@ -283,6 +283,8 @@ const id = {
     services: ["Fiber Optic", "Router", "TV Apps", "Premium Channel", "Kuota Unlimited", "Maintenance"],
     rights: "© 2026 FISSA.NET. Semua hak dilindungi.",
     hours: "Senin - Minggu, 08.00 - 21.00 WIB",
+    admin1: "Admin 1",
+    admin2: "Admin 2",
   },
   waFloat: {
     aria: "Chat WhatsApp FISSA.NET",
@@ -581,6 +583,8 @@ const en: Content = {
     services: ["Fiber Optic", "Router", "TV Apps", "Premium Channel", "Unlimited Data", "Maintenance"],
     rights: "© 2026 FISSA.NET. All rights reserved.",
     hours: "Monday - Sunday, 08.00 - 21.00 WIB",
+    admin1: "Admin 1",
+    admin2: "Admin 2",
   },
   waFloat: {
     aria: "Chat with FISSA.NET on WhatsApp",

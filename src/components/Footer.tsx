@@ -1,8 +1,8 @@
 "use client";
 
-import { SITE, WA_DEFAULT_MESSAGE, WA_DEFAULT_MESSAGE_EN, waLink } from "@/lib/site";
+import { ADMINS, SITE, WA_DEFAULT_MESSAGE, WA_DEFAULT_MESSAGE_EN, waLink } from "@/lib/site";
 import { useSettings } from "./SettingsProvider";
-import { WifiIcon } from "./icons";
+import { WifiIcon, WhatsAppIcon } from "./icons";
 
 export default function Footer() {
   const { lang, t } = useSettings();
@@ -19,15 +19,21 @@ export default function Footer() {
               FISSA.NET
             </div>
             <p className="footer-copy">{t.footer.copy}</p>
-            <a
-              className="btn btn-ghost"
-              style={{ marginTop: "1.2rem" }}
-              href={waLink(null, lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {SITE.phoneDisplay}
-            </a>
+            <div className="footer-admins" style={{ marginTop: "1.2rem" }}>
+              {ADMINS.map((admin) => (
+                <a
+                  key={admin.id}
+                  className="btn btn-ghost"
+                  style={{ marginBottom: "0.5rem", width: "100%" }}
+                  href={waLink(admin.waNumber, lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsAppIcon width={16} height={16} style={{ marginRight: "0.5rem" }} />
+                  {admin.id === 1 ? t.footer.admin1 : t.footer.admin2} ({admin.phoneDisplay})
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>

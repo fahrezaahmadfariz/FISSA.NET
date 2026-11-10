@@ -2153,3 +2153,232 @@ html[data-theme="dark"] ::-webkit-scrollbar-track {
 html[data-theme="dark"] ::-webkit-scrollbar-thumb {
   background: #16324f;
 }
+
+/* light mode: bright surround */
+html[data-theme="light"] {
+  --page: #f0f4f9;
+  --page-deep: #e2eaf3;
+  --stage: #ffffff;
+  --stage-2: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --surface-3: #e2e8f0;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.15);
+  --blue: #2563eb;
+  --cyan: #0891b2;
+  --cyan-strong: #0e7490;
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.1);
+  background: var(--page);
+}
+
+html[data-theme="light"] body {
+  background: linear-gradient(160deg, var(--page) 0%, var(--page-deep) 100%);
+}
+
+html[data-theme="light"] .site-stage {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .hero-card {
+  background: #ffffff;
+}
+
+html[data-theme="light"] .btn-neon {
+  color: #0f172a;
+  background: linear-gradient(135deg, #a5f3fc, #4fdcff, #22b8ff);
+}
+
+html[data-theme="light"] .btn-neon:hover {
+  background: linear-gradient(135deg, #c6f7ff, #67e8f9, #38bdf8);
+}
+
+html[data-theme="light"] .btn-ghost {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .btn-ghost:hover {
+  background: rgba(79, 220, 255, 0.08);
+  border-color: rgba(79, 220, 255, 0.55);
+}
+
+html[data-theme="light"] .nav-pill,
+html[data-theme="light"] .nav-pill.is-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="light"] .nav-brand {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .brand-mark {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .nav-link,
+html[data-theme="light"] .nav-link:hover {
+  color: #334155;
+}
+
+html[data-theme="light"] .nav-link.is-active {
+  color: #0891b2;
+}
+
+html[data-theme="light"] .nav-toggle,
+html[data-theme="light"] .nav-icon-btn,
+html[data-theme="light"] .nav-lang {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .nav-lang .is-on {
+  color: #0891b2;
+}
+
+html[data-theme="light"] .nav-lang-sep {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* light mode: bright surround */
+html[data-theme="light"] {
+  --page: #f0f4f9;
+  --page-deep: #e2eaf3;
+  --stage: #ffffff;
+  --stage-2: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --surface-3: #e2e8f0;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.15);
+  --blue: #2563eb;
+  --cyan: #0891b2;
+  --cyan-strong: #0e7490;
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.1);
+  background: var(--page);
+}
+
+html[data-theme="light"] body {
+  background: linear-gradient(160deg, var(--page) 0%, var(--page-deep) 100%);
+}
+
+html[data-theme="light"] .site-stage {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .hero-card {
+  background: #ffffff;
+}
+
+html[data-theme="light"] .btn-neon {
+  color: #0f172a;
+  background: linear-gradient(135deg, #a5f3fc, #4fdcff, #22b8ff);
+}
+
+html[data-theme="light"] .btn-neon:hover {
+  background: linear-gradient(135deg, #c6f7ff, #67e8f9, #38bdf8);
+}
+
+html[data-theme="light"] .btn-ghost {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .btn-ghost:hover {
+  background: rgba(79, 220, 255, 0.08);
+  border-color: rgba(79, 220, 255, 0.55);
+}
+
+html[data-theme="light"] .nav-pill,
+html[data-theme="light"] .nav-pill.is-scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="light"] .nav-brand {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .brand-mark {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .nav-link,
+html[data-theme="light"] .nav-link:hover {
+  color: #334155;
+}
+
+html[data-theme="light"] .nav-link.is-active {
+  color: #0891b2;
+}
+
+html[data-theme="light"] .nav-toggle,
+html[data-theme="light"] .nav-icon-btn,
+html[data-theme="light"] .nav-lang {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .nav-lang .is-on {
+  color: #0891b2;
+}
+
+html[data-theme="light"] .nav-lang-sep {
+  color: #94a3b8;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html[data-theme="light"] .neon-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+html[data-theme="light"] .about-lead,
+html[data-theme="light"] .about-point,
+html[data-theme="light"] .promo-item,
+html[data-theme="light"] .promo-desc,
+html[data-theme="light"] .stat-label {
+  color: #475569;
+}
+
+html[data-theme="light"] .promo-panel {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+html[data-theme="light"] .stat-num {
+  background: linear-gradient(120deg, #0891b2, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

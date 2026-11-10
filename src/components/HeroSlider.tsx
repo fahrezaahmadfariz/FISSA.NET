@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSettings } from "./SettingsProvider";
 import { ArrowRightIcon, WifiIcon } from "./icons";
-import { waLink } from "@/lib/site";
+import { ADMINS, waLink } from "@/lib/site";
 
 const AUTOPLAY_MS = 6500;
 
@@ -13,6 +13,7 @@ export default function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [admin, setAdmin] = useState<1 | 2>(1);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,7 +39,8 @@ export default function HeroSlider() {
       "",
       t.register.message.closing,
     ].join("\n");
-    const url = waLink(null, message);
+    const selected = ADMINS.find((a) => a.id === admin) ?? ADMINS[0];
+    const url = waLink(selected.waNumber, message);
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
@@ -82,6 +84,13 @@ export default function HeroSlider() {
                   value={phone}
                   onChange={(event) => setPhone(event.target.value)}
                 />
+              </label>
+              <label className="hero-field">
+                <span>{t.register.selectAdmin}</span>
+                <select value={admin} onChange={(event) => setAdmin(Number(event.target.value) as 1 | 2)}>
+                  <option value={1}>{t.register.admin1}</option>
+                  <option value={2}>{t.register.admin2}</option>
+                </select>
               </label>
               <button type="submit" className="btn btn-neon hero-form-btn">
                 {t.hero.formSubmit}
