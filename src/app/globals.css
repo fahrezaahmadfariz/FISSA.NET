@@ -1869,24 +1869,68 @@ svg {
 }
 
 /* floating whatsapp */
-.wa-float {
+.wa-float-wrap {
   position: fixed;
   right: 1.2rem;
   bottom: 1.2rem;
   z-index: 70;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+
+.wa-float {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   padding: 0.8rem 1.15rem;
   border-radius: 999px;
+  border: 0;
   background: #22c55e;
   color: #ffffff;
   font-family: var(--display);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  cursor: pointer;
   box-shadow: 0 16px 34px rgba(0, 8, 24, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.16);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.wa-float-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 180px;
+}
+
+.wa-float-option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 16px;
+  background: #052e16;
+  color: #dcfce7;
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 8, 24, 0.35);
+  font-family: var(--display);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.wa-float-option small {
+  margin-left: auto;
+  font-family: var(--body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #86efac;
+}
+
+.wa-float-option:hover {
+  background: #14532d;
+  color: #ffffff;
 }
 
 .wa-float:hover {

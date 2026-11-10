@@ -22,7 +22,7 @@ export default function Footer() {
             <a
               className="btn btn-ghost"
               style={{ marginTop: "1.2rem" }}
-              href={waLink(lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
+              href={waLink(null, lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
               target="_blank"
               rel="noopener noreferrer"
             >

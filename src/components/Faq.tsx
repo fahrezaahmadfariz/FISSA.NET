@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import { useSettings } from "./SettingsProvider";
 import { PlusIcon } from "./icons";

@@ -38,7 +38,7 @@ export default function HeroSlider() {
       "",
       t.register.message.closing,
     ].join("\n");
-    const url = waLink(message);
+    const url = waLink(null, message);
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
-import { SITE, WA_DEFAULT_MESSAGE, WA_DEFAULT_MESSAGE_EN, waLink } from "@/lib/site";
+import { ADMINS, WA_DEFAULT_MESSAGE, WA_DEFAULT_MESSAGE_EN, waLink } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
 import { useSettings } from "./SettingsProvider";
 import {
@@ -16,20 +16,20 @@ import {
 
 export default function Contact() {
   const { lang, t } = useSettings();
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<string | null>(null);
 
   useEffect(() => {
     if (!copied) return;
-    const timer = setTimeout(() => setCopied(false), 2000);
+    const timer = setTimeout(() => setCopied(null), 2000);
     return () => clearTimeout(timer);
   }, [copied]);
 
-  const copyPhone = async () => {
+  const copyPhone = async (phoneRaw: string) => {
     try {
-      await navigator.clipboard.writeText(SITE.phoneRaw);
-      setCopied(true);
+      await navigator.clipboard.writeText(phoneRaw);
+      setCopied(phoneRaw);
     } catch {
-      setCopied(false);
+      setCopied(null);
     }
   };
 
@@ -49,7 +49,7 @@ export default function Contact() {
             <p className="contact-copy">{t.contact.copy}</p>
             <a
               className="btn btn-neon"
-              href={waLink(lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
+              href={waLink(ADMINS[0].waNumber, lang === "en" ? WA_DEFAULT_MESSAGE_EN : WA_DEFAULT_MESSAGE)}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -62,20 +62,32 @@ export default function Contact() {
           </div>
 
           <div className="contact-info">
-            <div className="neon-card info-row" data-reveal>
-              <span className="info-icon">
-                <PhoneIcon width={20} height={20} />
-              </span>
-              <div>
-                <div className="info-label">{t.contact.phoneLabel}</div>
-                <div className="info-value">{SITE.phoneDisplay}</div>
+            {ADMINS.map((admin) => (
+              <div
+                className="neon-card info-row"
+                data-reveal
+                key={admin.id}
+                style={{ "--reveal-delay": `${admin.id * 80}ms` } as CSSProperties}
+              >
+                <span className="info-icon">
+                  <PhoneIcon width={20} height={20} />
+                </span>
+                <div>
+                  <div className="info-label">{admin.name}</div>
+                  <div className="info-value">{admin.phoneDisplay}</div>
+                </div>
+                <button
+                  type="button"
+                  className="copy-btn"
+                  onClick={() => copyPhone(admin.phoneRaw)}
+                  aria-live="polite"
+                >
+                  {copied === admin.phoneRaw ? <CheckIcon width={14} height={14} /> : <CopyIcon width={14} height={14} />}
+                </button>
               </div>
-              <button type="button" className="copy-btn" onClick={copyPhone} aria-live="polite">
-                {copied ? <CheckIcon width={14} height={14} /> : <CopyIcon width={14} height={14} />}
-              </button>
-            </div>
+            ))}
 
-            <div className="neon-card info-row" data-reveal style={{ "--reveal-delay": "80ms" } as CSSProperties}>
+            <div className="neon-card info-row" data-reveal style={{ "--reveal-delay": "160ms" } as CSSProperties}>
               <span className="info-icon">
                 <ClockIcon width={20} height={20} />
               </span>
@@ -85,7 +97,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="neon-card info-row" data-reveal style={{ "--reveal-delay": "160ms" } as CSSProperties}>
+            <div className="neon-card info-row" data-reveal style={{ "--reveal-delay": "240ms" } as CSSProperties}>
               <span className="info-icon">
                 <MapPinIcon width={20} height={20} />
               </span>

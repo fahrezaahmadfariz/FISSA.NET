@@ -8,8 +8,27 @@ export const SITE = {
   area: "Melayani pemasangan di area kota & sekitarnya",
 } as const;
 
-export const waLink = (message?: string) =>
-  `https://wa.me/${SITE.waNumber}${message ? `?text=${encodeURIComponent(message)}` : ""}`;
+export const ADMINS = [
+  {
+    id: 1,
+    name: "Admin 1",
+    phoneDisplay: "0882 9343 8539",
+    phoneRaw: "088293438539",
+    waNumber: "6288293438539",
+  },
+  {
+    id: 2,
+    name: "Admin 2",
+    phoneDisplay: "0877 3398 0672",
+    phoneRaw: "087733980672",
+    waNumber: "6287733980672",
+  },
+] as const;
+
+export const waLink = (adminNumber: string | null, message?: string) => {
+  const raw = adminNumber ?? SITE.waNumber;
+  return `https://wa.me/${raw}${message ? `?text=${encodeURIComponent(message)}` : ""}`;
+};
 
 export const WA_DEFAULT_MESSAGE =
   "Halo FISSA.NET! Saya tertarik dengan layanan internet FISSA.NET dan ingin bertanya.";

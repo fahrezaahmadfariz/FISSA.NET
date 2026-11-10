@@ -13,19 +13,8 @@ export default function RegistrationForm() {
   const [hp, setHp] = useState("");
   const [alamat, setAlamat] = useState("");
   const [paket, setPaket] = useState("");
+  const [selectedAdmin, setSelectedAdmin] = useState("6288293438539");
   const [lastUrl, setLastUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handler = (event: Event) => {
-      const detail = (event as CustomEvent<string>).detail;
-      if (detail) {
-        setPaket(detail);
-        setLastUrl(null);
-      }
-    };
-    window.addEventListener("fissa:select-package", handler);
-    return () => window.removeEventListener("fissa:select-package", handler);
-  }, []);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -41,7 +30,7 @@ export default function RegistrationForm() {
       t.register.message.closing,
     ].join("\n");
 
-    const url = waLink(message);
+    const url = waLink(selectedAdmin, message);
     setLastUrl(url);
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -88,10 +77,7 @@ export default function RegistrationForm() {
                   type="text"
                   placeholder={t.register.namePlaceholder}
                   value={nama}
-                  onChange={(event) => {
-                    setNama(event.target.value);
-                    setLastUrl(null);
-                  }}
+                  onChange={(event) => setNama(event.target.value)}
                   required
                 />
               </div>
@@ -105,10 +91,7 @@ export default function RegistrationForm() {
                   inputMode="tel"
                   placeholder={t.register.phonePlaceholder}
                   value={hp}
-                  onChange={(event) => {
-                    setHp(event.target.value);
-                    setLastUrl(null);
-                  }}
+                  onChange={(event) => setHp(event.target.value)}
                   required
                 />
               </div>
@@ -120,10 +103,7 @@ export default function RegistrationForm() {
                   name="alamat"
                   placeholder={t.register.addressPlaceholder}
                   value={alamat}
-                  onChange={(event) => {
-                    setAlamat(event.target.value);
-                    setLastUrl(null);
-                  }}
+                  onChange={(event) => setAlamat(event.target.value)}
                   required
                 />
               </div>
@@ -134,10 +114,7 @@ export default function RegistrationForm() {
                   id="paket-pilihan"
                   name="paket"
                   value={paket}
-                  onChange={(event) => {
-                    setPaket(event.target.value);
-                    setLastUrl(null);
-                  }}
+                  onChange={(event) => setPaket(event.target.value)}
                   required
                 >
                   <option value="" disabled>
@@ -150,6 +127,27 @@ export default function RegistrationForm() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              <div className="field full">
+                <label>{t.register.selectAdmin}</label>
+                <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                  {[
+                    { id: 1, name: "Admin 1", waNumber: "6288293438539", phoneDisplay: "0882 9343 8539" },
+                    { id: 2, name: "Admin 2", waNumber: "6287733980672", phoneDisplay: "0877 3398 0672" },
+                  ].map((admin) => (
+                    <label key={admin.id} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <input
+                        type="radio"
+                        name="admin"
+                        value={admin.waNumber}
+                        checked={selectedAdmin === admin.waNumber}
+                        onChange={(e) => setSelectedAdmin(e.target.value)}
+                      />
+                      {admin.name} ({admin.phoneDisplay})
+                    </label>
+                  ))}
+                </div>
               </div>
 
               <div className="form-actions">
